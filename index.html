@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Meu Site</title>
+    <link rel="stylesheet" type="text/css" href="_css/s.css"/>
+	</head>
+	<script>
+// Obtém o botão de alternar
+const toggleModeButton = document.getElementById("toggle-mode");
+
+// Adiciona um ouvinte de evento de clique ao botão
+toggleModeButton.addEventListener("click", () => {
+    const body = document.body;
+
+    // Alterna entre as classes de modo claro e escuro
+    if (body.classList.contains("light-mode")) {
+        body.classList.remove("light-mode");
+        body.classList.add("dark-mode");
+    } else {
+        body.classList.remove("dark-mode");
+        body.classList.add("light-mode");
+    }
+});
+
+	</script>
+
+
+<body class="light-mode">
+    <h1>Meu Site</h1>
+    <p>Este é o conteúdo do meu site.</p>
+    <button id="toggle-mode">Alterar Modo</button>
+</body>
+</html>
